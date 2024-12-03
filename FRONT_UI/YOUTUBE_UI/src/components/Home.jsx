@@ -29,15 +29,10 @@ export default function Home({ isOpen })
   })
 
   useEffect(()=>{
-   if(!cats ||cats==undefined |cats==null)
-    {
-    } 
   const uniqueValues1 = [...new Set(cats)];
-  setTimeout(()=>{
     setrandomcategory(uniqueValues1);
     randomcategory
-  },1000);
-  },[]);
+  },[videodata]);
 
   return (
     <div className={`Home ${isOpen ? 'left-56 w-11/12 ' : 'left-0 w-full '} h-full overflow-y-scroll fixed flex flex-col box-border`}>
